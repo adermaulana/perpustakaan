@@ -44,5 +44,5 @@ Route::get('/dashboard', function () {
 
 //Login
 Route::get('/login', [LoginController::class,'index'])->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class,'authenticate']);
+Route::post('/login', [LoginController::class,'login']);
 Route::post('/logout', [LoginController::class,'logout']);
