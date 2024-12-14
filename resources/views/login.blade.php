@@ -53,6 +53,9 @@
         </div>
     
         <button style="background-color:#ccd5ae;" id="button" class="w-100 btn btn-lg " type="submit">Login</button>
+        <div class="text-center mt-2">
+          Belum punya akun?<a href="/registrasi">Registrasi</a>
+        </div>
       </form>
     </main>
   </div>

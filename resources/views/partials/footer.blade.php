@@ -35,7 +35,7 @@
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Kontak</h6>
           <p><i class="fa fa-phone"></i> +62 81354665042</p>
-          <p><i class="fa fa-envelope"></i> perpustakaan@smkn8jeneponto.sch.id</p>
+          <p><i class="fa fa-envelope"></i> perpustakaan@sekolahxx.sch.id</p>
           <p><i class="fa fa-clock"></i> Jam Buka: 08.00 - 16.00 WITA</p>
         </div>
         <!-- Grid column -->
@@ -48,7 +48,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2024
-    <a class="text-reset fw-bold text-decoration-none" href="#">Perpustakaan SMKN 8 Jeneponto</a>
+    <a class="text-reset fw-bold text-decoration-none" href="#">Perpustakaan Sekolah XX</a>
   </div>
   <!-- Copyright -->
 </footer>

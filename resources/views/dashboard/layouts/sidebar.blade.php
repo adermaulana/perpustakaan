@@ -18,8 +18,8 @@
             <ul id="buku-nav" class="nav-content collapse">
             @endif
                 <li>
-                    <a href="/dashboard/buku/create">
-                    @if(Request::is('dashboard/buku/create'))
+                    <a href="/dashboard/buku/tambah">
+                    @if(Request::is('dashboard/buku/tambah'))
                         <i class="bi bi-circle"></i><span class="text-primary">Tambah Buku</span>
                     @else
                         <i class="bi bi-circle"></i><span>Tambah Buku</span>

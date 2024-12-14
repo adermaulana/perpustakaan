@@ -36,7 +36,7 @@
                   <i class="bi bi-book"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>1000</h6>
+                  <h6>{{ $total_buku }}</h6>
                 </div>
               </div>
             </div>

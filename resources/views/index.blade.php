@@ -21,12 +21,12 @@
             mengelola kegiatan perpustakaan di Sekolah XX
         </p>
 
-        <a class="button btn red" href="/">Jelajahi Katalog</a>
+        <a class="button btn red" href="/katalog">Jelajahi Katalog</a>
 
         <div class="row mt-4">
             <div class="col col-3">
                 <h6>Total Buku</h6>
-                <h2>1000</h2>
+                <h2>{{ $total_buku }}</h2>
             </div>
             <div class="col col-3">
                 <h6>Buku Dipinjam</h6>

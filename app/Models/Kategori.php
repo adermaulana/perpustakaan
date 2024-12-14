@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Rapor extends Model
+class Kategori extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = ['nama', 'deskripsi'];
 
-    public function peserta(){
-        return $this->belongsTo(Peserta::class);
+    public function buku()
+    {
+        return $this->hasMany(Buku::class);
     }
+
 }
