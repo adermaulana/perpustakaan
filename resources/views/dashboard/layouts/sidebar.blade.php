@@ -57,8 +57,8 @@
             <ul id="peminjaman-nav" class="nav-content collapse">
             @endif
                 <li>
-                    <a href="/dashboard/peminjaman/create">
-                    @if(Request::is('dashboard/peminjaman/create'))
+                    <a href="/dashboard/peminjaman/tambah">
+                    @if(Request::is('dashboard/peminjaman/tambah'))
                         <i class="bi bi-circle"></i><span class="text-primary">Tambah Peminjaman</span>
                     @else
                         <i class="bi bi-circle"></i><span>Tambah Peminjaman</span>
@@ -87,8 +87,8 @@
             <ul id="anggota-nav" class="nav-content collapse">
             @endif
                 <li>
-                    <a href="/dashboard/anggota/create">
-                    @if(Request::is('dashboard/anggota/create'))
+                    <a href="/dashboard/anggota/tambah">
+                    @if(Request::is('dashboard/anggota/tambah'))
                         <i class="bi bi-circle"></i><span class="text-primary">Tambah Anggota</span>
                     @else
                         <i class="bi bi-circle"></i><span>Tambah Anggota</span>

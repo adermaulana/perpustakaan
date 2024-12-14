@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\Admin\BukuController;
-
 use App\Http\Controllers\Admin\AnggotaController;
 use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Admin\PeminjamanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,3 +74,8 @@ Route::post('dashboard/anggota/tambah',[AnggotaController::class,'proses'])->nam
 Route::get('dashboard/anggota/{anggota}/edit',[AnggotaController::class,'edit']);
 Route::put('dashboard/anggota/{anggota}/edit',[AnggotaController::class,'update'])->name('edit.anggota');
 Route::get('dashboard/anggota/{anggota}/delete',[AnggotaController::class,'hapus']);
+
+//Peminjaman
+Route::get('dashboard/peminjaman',[PeminjamanController::class,'index']);
+Route::get('dashboard/peminjaman/tambah',[PeminjamanController::class,'tambah']);
+Route::post('dashboard/peminjaman/tambah',[PeminjamanController::class,'proses'])->name('tambah.peminjaman');
