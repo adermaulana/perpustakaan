@@ -22,4 +22,13 @@ class KatalogController extends Controller
         ]);
     }
 
+    public function detail(Buku $buku){
+        
+        return view('detail',[
+            'title' => 'Detail Buku',
+            'active' => 'Detail Buku',
+            'book' => $buku
+        ]);
+    }
+
 }

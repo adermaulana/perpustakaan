@@ -18,6 +18,7 @@ class CreatePeminjamanTable extends Migration
             $table->foreignId('id_anggota');
             $table->foreignId('id_buku');
             $table->date('tanggal_pinjam');
+            $table->date('tanggal_rencana_pengembalian')->nullable();
             $table->date('tanggal_kembali')->nullable();
             $table->string('status')->default('dipinjam');
             $table->timestamps();

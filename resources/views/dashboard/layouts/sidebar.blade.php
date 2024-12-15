@@ -113,35 +113,5 @@
                 <span>Pengembalian Buku</span>
             </a>
         </li><!-- End Pengembalian Nav -->
-
-        <li class="nav-item">
-            <a class="nav-link collapsed {{ Request::is('dashboard/laporan*') ? 'text-primary bg-light' : '' }}" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-file-earmark-text"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
-            </a>
-            @if(Request::is('dashboard/laporan*'))
-            <ul id="laporan-nav" class="nav-content">
-            @else
-            <ul id="laporan-nav" class="nav-content collapse">
-            @endif
-                <li>
-                    <a href="/dashboard/laporan/buku">
-                    @if(Request::is('dashboard/laporan/buku'))
-                        <i class="bi bi-circle"></i><span class="text-primary">Laporan Buku</span>
-                    @else
-                        <i class="bi bi-circle"></i><span>Laporan Buku</span>
-                    @endif
-                    </a>
-                </li>
-                <li>
-                    <a href="/dashboard/laporan/peminjaman">
-                    @if(Request::is('dashboard/laporan/peminjaman'))
-                        <i class="bi bi-circle"></i><span class="text-primary">Laporan Peminjaman</span>
-                    @else
-                        <i class="bi bi-circle"></i><span>Laporan Peminjaman</span>
-                    @endif
-                    </a>
-                </li>
-            </ul>
-        </li><!-- End Laporan Nav -->
     </ul>
 </aside><!-- End Sidebar-->

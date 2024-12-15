@@ -54,7 +54,7 @@
                   <i class="bi bi-journal-check"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>15</h6>
+                  <h6>{{ $buku_dipinjam }}</h6>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@
                   <i class="bi bi-people"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>200</h6>
+                  <h6>{{ $total_anggota }}</h6>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@
                   <i class="bi bi-tags-fill"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>5</h6>
+                  <h6>{{ $total_kategori }}</h6>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@
                   <i class="bi bi-journal-bookmark-fill"></i>
                 </div>
                 <div class="ps-3">
-                  <h6>12</h6>
+                  <h6>{{ $buku_dikembalikan }}</h6>
                 </div>
               </div>
             </div>

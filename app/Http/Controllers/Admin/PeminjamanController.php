@@ -14,7 +14,7 @@ class PeminjamanController extends Controller
     {
         return view('dashboard.peminjaman.index', [
             'title' => 'Peminjaman',
-            'peminjaman' => Peminjaman::all(),
+            'peminjaman' => Peminjaman::where('status', 'dipinjam')->get(),
         ]);
     }
 
@@ -32,7 +32,6 @@ class PeminjamanController extends Controller
         $buku = Buku::findOrFail($request->id_buku);
 
         if ($buku && $buku->stok > 0) {
-
             $buku->stok -= 1;
             $buku->save();
 
@@ -42,7 +41,7 @@ class PeminjamanController extends Controller
             $peminjaman->id_buku = $request->id_buku;
             $peminjaman->id_anggota = $request->id_anggota;
             $peminjaman->tanggal_pinjam = $request->tanggal_pinjam;
-            $peminjaman->tanggal_kembali = $request->tanggal_kembali;
+            $peminjaman->tanggal_rencana_pengembalian = $request->tanggal_rencana_pengembalian;
             $peminjaman->status = 'dipinjam';
 
             $peminjaman->save(); // Simpan peminjaman
@@ -51,5 +50,37 @@ class PeminjamanController extends Controller
         } else {
             return back()->with('error', 'Stok buku tidak cukup');
         }
+    }
+
+    public function edit(Peminjaman $peminjaman)
+    {
+        return view('dashboard.peminjaman.edit', [
+            'title' => 'Edit Peminjaman',
+            'peminjaman' => $peminjaman,
+            'anggota' => Anggota::all(),
+            'buku' => Buku::all(),
+        ]);
+    }
+
+    public function update(Request $request, Peminjaman $peminjaman)
+    {
+        $peminjaman->id_buku = $request->id_buku;
+        $peminjaman->tanggal_pinjam = $request->tanggal_pinjam;
+        $peminjaman->tanggal_rencana_pengembalian = $request->tanggal_rencana_pengembalian;
+
+        $peminjaman->save();
+
+        return redirect('dashboard/peminjaman');
+    }
+
+    public function hapus(Peminjaman $peminjaman)
+    {
+
+        $buku = $peminjaman->buku;
+        $buku->increment('stok');
+        $buku->save();
+
+        Peminjaman::destroy($peminjaman->id);
+        return redirect('dashboard/peminjaman');
     }
 }

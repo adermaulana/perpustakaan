@@ -35,25 +35,25 @@
 <section class="book-catalog container mt-5">
     <div class="row">
         @forelse ($books as $book)
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 mt-5">
             <div class="card h-100">
-                <img src="{{ $book->cover_image ? asset('storage/' . $book->cover_image) : asset('img/default-book-cover.jpg') }}" 
+                <img src="/{{ $book->gambar }}"
                      class="card-img-top" 
-                     alt="{{ $book->title }}"
+                     alt="{{ $book->judul }}"
                      style="height: 300px; object-fit: cover;">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $book->title }}</h5>
+                    <h5 class="card-title">{{ $book->judul }}</h5>
                     <p class="card-text">
-                        <strong>Penulis:</strong> {{ $book->author }}<br>
-                        <strong>Kategori:</strong> {{ $book->category }}<br>
+                        <strong>Penulis:</strong> {{ $book->penulis }}<br>
+                        <strong>Kategori:</strong> {{ $book->kategori->nama }}<br>
                         <strong>Ketersediaan:</strong> 
-                        @if ($book->stock > 0)
-                            <span class="text-success">Tersedia ({{ $book->stock }} eks)</span>
+                        @if ($book->stok > 0)
+                            <span class="text-success">Tersedia ({{ $book->stok }} buku)</span>
                         @else
                             <span class="text-danger">Tidak Tersedia</span>
                         @endif
                     </p>
-                    <a href="{{ route('books.show', $book->id) }}" class="btn btn-primary">Detail Buku</a>
+                    <a href="{{ route('katalog.detail', $book->judul) }}" class="btn btn-primary">Detail Buku</a>
                 </div>
             </div>
         </div>
